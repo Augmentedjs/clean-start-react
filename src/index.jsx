@@ -6,11 +6,11 @@ import {
   RouterProvider
 } from "react-router-dom";
 
-import ErrorPage from "./layout/errorPage";
-
 import "./styles/main.scss";
 
 import App from "./app";
+import ErrorPage from "./layout/errorPage";
+import Home from "./home";
 
 // Router
 const router = createHashRouter([

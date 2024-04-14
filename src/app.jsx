@@ -1,3 +1,4 @@
+import React from "react";
 import MainPanel from "./layout/mainPanel";
 
 /* The start component */

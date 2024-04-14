@@ -64,7 +64,7 @@ if (cluster.isMaster) {
 
   //Global Vars
 
-  app.use("/", express.static(path.join(__dirname, "/../dist")));
+  app.use("/", express.static(path.join(__dirname, "/../public")));
 
   // routes ======================================================================
 

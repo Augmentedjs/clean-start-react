@@ -8,6 +8,9 @@ const isProd = process.argv[process.argv.indexOf("--mode") + 1] === "production"
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+
+const LOGO = "src/images/elements.png";
+
 console.info(`Mode: ${((isProd) ? "Production" : "Development")}`);
 
 const build = {
@@ -17,7 +20,7 @@ const build = {
   output: {
     clean: true,
     filename: "index.js",
-    path: path.resolve(__dirname, "../dist")
+    path: path.resolve(__dirname, "public")
   },
   resolve: {
     extensions: [ ".js", ".jsx" ],
@@ -76,8 +79,7 @@ const build = {
       directory: path.join(__dirname, "dist"),
     },
     compress: true,
-    port: 8080,
-    onAfterSetupMiddleware: devServer
+    port: 8080
   },
   plugins: [
     new HtmlWebPackPlugin({
